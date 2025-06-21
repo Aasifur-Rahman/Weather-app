@@ -1,3 +1,4 @@
+import { cn } from "@/utils/cn";
 import React from "react";
 import { FaSearchLocation } from "react-icons/fa";
 
@@ -12,7 +13,7 @@ export default function SearchBar(props: Props) {
   return (
     <form
       onSubmit={props.onSubmit}
-      className="flex relative items-center justify-center h-10"
+      className={cn("flex relative items-center justify-center h-10", props.className)}
     >
       <input
         value={props.value}
